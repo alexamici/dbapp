@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "dbapp"
 version = "0.1.0"
@@ -6,11 +10,12 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "alembic>=1.17.0",
-    "psycopg>=3.2.11",
+    "psycopg-binary>=3.2.11",
     "sqlalchemy>=2.0.44",
 ]
 
 [dependency-groups]
-dev = [
-    "pre-commit>=4.3.0",
-]
+dev = ["pre-commit>=4.3.0", "pytest-postgresql>=7.0.2"]
+
+[tool.setuptools]
+packages = ["dbapp"]
