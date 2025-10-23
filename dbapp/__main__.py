@@ -1,6 +1,3 @@
-from . import schema
-
-
 def main():
     print()
 
