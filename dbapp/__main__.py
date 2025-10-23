@@ -1,5 +1,8 @@
+from . import schema
+
+
 def main():
-    print("Hello from dbapp!")
+    print()
 
 
 if __name__ == "__main__":
