@@ -19,3 +19,7 @@ dev = ["pre-commit>=4.3.0", "pytest-postgresql>=7.0.2"]
 
 [tool.setuptools]
 packages = ["dbapp"]
+
+[tool.alembic]
+script_location = "%(here)s/alembic"
+prepend_sys_path = ["."]
