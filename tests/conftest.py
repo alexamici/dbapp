@@ -1,4 +1,5 @@
 import sqlalchemy as sa
+
 import pytest
 
 
@@ -8,3 +9,8 @@ def engine(postgresql):
     engine = sa.create_engine(connection, echo=False, poolclass=sa.NullPool)
 
     yield engine
+
+
+@pytest.fixture
+def alembic_engine(engine):
+    return engine
